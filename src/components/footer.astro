@@ -1,0 +1,92 @@
+---
+import logo from '../assets/wa.jpeg';
+// Nota: Asegúrate de que la ruta '../assets/wa.jpeg' sea correcta y exista.
+---
+
+<footer class="simple-footer">
+  <div class="footer-left">
+    <!-- 
+      Usamos la etiqueta <img> de manera optimizada en Astro.
+      Añadimos la clase 'footer-logo' para aplicar estilos.
+    -->
+    <img id="logo" src={logo.src} alt="Logo de Star Up" class="footer-logo">
+    <span class="logo-text">Star Up</span>
+  </div>
+
+  <div class="footer-right">
+    <!-- Se usa Markdown en el <p> para simular el estilo de la imagen original -->
+    <p>© 2025 Star Up</p>
+  </div>
+</footer>
+
+<style>
+/* ---------------------------------
+  ESTILOS DEL LOGO Y ALINEACIÓN 
+  ---------------------------------
+*/
+
+/* Contenedor del logo y texto: usa Flexbox para alinear el ícono y el texto */
+.footer-left {
+  display: flex;
+  align-items: center; /* Centra verticalmente la imagen y el texto */
+  gap: 10px; /* Espacio entre el ícono y el texto */
+}
+
+/* Estilo de la imagen del logo */
+.footer-logo {
+  /* La clave es establecer una altura específica (como 1.5em). 
+    La unidad 'em' se basa en el tamaño de fuente actual del elemento padre, 
+    lo que asegura que la altura de la imagen coincida con la altura de la línea de texto adyacente.
+  */
+  height: 3.5em; 
+  width: auto; /* Mantiene la proporción original de la imagen */
+  
+}
+
+
+/* ---------------------------------
+  ESTILOS GENERALES DEL FOOTER (Modificados ligeramente)
+  ---------------------------------
+*/
+.simple-footer {
+  /* Colores y fondo */
+  background-color: #1a1a1a; /* Negro muy oscuro */
+  color: #f0f0f0; /* Texto claro */
+  font-family: 'Inter', sans-serif; 
+  font-size: 0.9rem; /* Tamaño de fuente base */
+
+  /* Diseño Flexbox para alinear elementos */
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; /* Centra verticalmente todo el contenido */
+
+  /* Espaciado */
+  padding: 20px 40px; 
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+/* Estilo del texto del "logo" */
+.logo-text {
+  font-weight: 600; 
+}
+
+/* Estilo del texto de derechos de autor y proyecto */
+.footer-right p {
+  margin: 0; 
+  opacity: 0.8; 
+}
+
+/* Responsividad para móviles */
+@media (max-width: 600px) {
+  .simple-footer {
+    flex-direction: column; 
+    text-align: center;
+    padding: 15px 20px;
+  }
+
+  .footer-left {
+    margin-bottom: 10px; 
+  }
+}
+</style>

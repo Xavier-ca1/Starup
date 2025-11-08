@@ -1,0 +1,144 @@
+---
+// Importamos el mismo logo, asumiendo que el path es correcto
+import logo from '../assets/wa.jpeg'; 
+---
+
+<!-- Contenedor principal para aplicar el fondo degradado -->
+<div class="header-logo-container">
+  <!-- 1. CÁPSULA DEL LOGO -->
+  <div class="logo-capsule">
+    <!-- Contenedor para el logo y el nombre de la startup -->
+    <div class="logo-brand">
+      <img 
+        src={logo.src} 
+        alt="Logo de Star Up" 
+        class="brand-logo"
+      >
+      <span class="brand-text">Star Up</span>
+    </div>
+  </div>
+  
+  <!-- 2. TEXTO INTRODUCTORIO (DEBAJO DE LA CÁPSULA) -->
+  <div class="Intro">
+    <p class="p-main">We build products people <br> love to use</p>
+    <p class="p-sub">A venture studio creating delightful apps and tools. Building stuff until we find the next million dollar idea.</p>
+  </div>
+</div>
+
+<style>
+/* ---------------------------------
+  CONTENEDOR DEL ENCABEZADO Y FONDO
+  ---------------------------------
+*/
+.header-logo-container {
+  /* Fondo Degradado de Negro a Morado Oscuro (Arriba a Abajo) */
+  
+  /* Padding vertical para el componente en general */
+  padding: 40px 0; 
+  
+  /* Asegura que ocupe todo el ancho disponible */
+  width: 100%;
+  box-sizing: border-box;
+
+  /* Usa Flexbox en columna para apilar elementos */
+  display: flex; 
+  flex-direction: column; 
+  
+  /* CENTRADO HORIZONTAL: Alinea los elementos apilados al centro */
+  align-items: center; 
+}
+
+/* ---------------------------------
+  ESTILOS DE LA CÁPSULA 
+  ---------------------------------
+*/
+.logo-capsule {
+  /* Fondo Degradado de Gris Claro a Blanco para la píldora */
+  background-color: #d4d4d4 ; 
+  
+  padding: 10px 25px; 
+  border-radius: 9999px; 
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* ESPACIO DEBAJO DE LA CÁPSULA */
+  margin-bottom: 40px; 
+}
+
+/* ---------------------------------
+  ESTILOS DEL LOGO Y TEXTO DE LA MARCA
+  ---------------------------------
+*/
+
+/* Contenedor del logo e ícono dentro de la cápsula */
+.logo-brand {
+  display: flex;
+  align-items: center; 
+  gap: 12px; 
+}
+
+/* Estilo de la imagen del logo */
+.brand-logo {
+  height: 36px; 
+  width: auto; 
+  border-radius: 9999px;
+}
+
+/* Estilo del texto de la marca */
+.brand-text {
+  font-weight: 700; 
+  font-size: 1.5rem; 
+  
+  /* CÓDIGO CLAVE PARA EL TEXTO DEGRADADO */
+  background: linear-gradient(to bottom, #000000 0%,#3a1a5a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent; 
+}
+
+/* ---------------------------------
+  ESTILOS DEL TEXTO INTRODUCTORIO 
+  ---------------------------------
+*/
+.Intro {
+  font-weight: 700; 
+  text-align: center; 
+  color: #f0f0f0; 
+
+  /* CLAVE PARA EL CENTRADO: Limita el ancho del texto */
+  max-width: 800px; 
+  padding: 0 20px; 
+}
+
+/* ⭐️ NUEVA REGLA: Párrafo principal (P1) ⭐️ */
+.Intro .p-main {
+  font-size: 3rem; /* Mantiene el tamaño grande */
+  line-height: 1.2; 
+  margin-bottom: 10px; /* Pequeño espacio debajo del título */
+  margin-top: 0;
+}
+
+/* ⭐️ NUEVA REGLA: Párrafo secundario (P2) ⭐️ */
+.Intro .p-sub {
+  font-size: 1.5rem; /* REDUCIDO: Tamaño más pequeño y legible */
+  font-weight: 300; /* Menos negrita para que parezca subtítulo */
+  opacity: 0.8; /* Lo hace un poco más sutil */
+  line-height: 1.4;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+
+/* Ajuste para pantallas más pequeñas si el texto es demasiado grande */
+@media (max-width: 600px) {
+  .Intro .p-main {
+    font-size: 2rem; /* Reduce el tamaño del título en móviles */
+  }
+  .Intro .p-sub {
+    font-size: 1rem; /* Reduce el tamaño del subtítulo en móviles */
+  }
+}
+</style>
