@@ -1,0 +1,42 @@
+---
+import Logo from '../assets/wa.jpeg'; 
+---
+
+<div class = "Proyecto">
+    <p id="Titulo">Nuestros Proyectos</p>
+    <p id="Subtitulo"> From idea to launch. Here's what we've been building.</p>  
+</div>
+
+<style>
+    /* Seleccionamos el contenedor por su clase */
+.Proyecto {
+    /* ... (Propiedades de Flexbox y alineación que ya tenías) ... */
+    width: 100%; 
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    text-align: center;
+    
+    /* 🔑 CLAVE: Margen superior e inferior para separar el div de otras secciones. */
+    /* 60px arriba, auto a los lados (no necesario aquí, pero buena práctica), 100px abajo. */
+    margin: 60px auto 100px auto; 
+    background-color: transparent;
+}
+
+/* El resto de tus estilos */
+#Titulo {
+    color: black;
+    font-size: 2.5rem; /* Sugerencia: aumenta el tamaño para que destaque */
+    font-weight: bold;
+    margin-bottom: 0;
+    background-color: transparent;
+}
+#Subtitulo{
+    color: rgb(165, 165, 165);
+    opacity: 0.8;
+    font-size: 1.2rem;
+    margin-top: 5px;
+    margin: 10px;
+}
+
+</style>

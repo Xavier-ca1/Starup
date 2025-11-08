@@ -23,6 +23,11 @@ import logo from '../assets/wa.jpeg';
     <p class="p-main">We build products people <br> love to use</p>
     <p class="p-sub">A venture studio creating delightful apps and tools. Building stuff until we find the next million dollar idea.</p>
   </div>
+  <div>
+    <a href="https://www.apuestatotal.com/apuestas-en-vivo/#/sport/66/category/501/championship/2941/liveEvent/13283889" target="_blank">
+        <button>Contactanos</button>
+    </a>
+  </div>
 </div>
 
 <style>
@@ -130,7 +135,33 @@ import logo from '../assets/wa.jpeg';
   margin-bottom: 0;
   margin-top: 0;
 }
+.header-logo-container button {
+  /* Separación del texto introductorio */
+  margin-top: 40px; 
 
+  /* Fondo */
+  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); /* Degradado Morado a Azul */
+  color: white; /* Color del texto */
+  
+  /* Píldora/Cápsula */
+  padding: 12px 30px; /* Relleno para hacerlo más grande */
+  border: none; /* Quitamos el borde por defecto */
+  border-radius: 9999px; /* Borde muy redondeado para forma de píldora */
+  
+  /* Texto */
+  font-size: 1.1rem; 
+  font-weight: 600; 
+  cursor: pointer; /* Cambiar el cursor para indicar que es interactivo */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transición suave para el efecto hover */
+}
+
+/* Efecto al pasar el mouse (hover) */
+.header-logo-container button:hover {
+  /* Le da un pequeño efecto de elevación (escala) */
+  transform: scale(1.05); 
+  /* Sombra suave para darle profundidad */
+  box-shadow: 0 5px 15px rgba(106, 17, 203, 0.4); 
+}
 
 /* Ajuste para pantallas más pequeñas si el texto es demasiado grande */
 @media (max-width: 600px) {
