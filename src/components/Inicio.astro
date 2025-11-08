@@ -59,7 +59,7 @@ import logo from '../assets/wa.jpeg';
 */
 .logo-capsule {
   /* Fondo Degradado de Gris Claro a Blanco para la píldora */
-  background-color: #d4d4d4 ; 
+  background-color: #000000 ; 
   
   padding: 10px 25px; 
   border-radius: 9999px; 
@@ -96,8 +96,7 @@ import logo from '../assets/wa.jpeg';
   font-weight: 700; 
   font-size: 1.5rem; 
   
-  /* CÓDIGO CLAVE PARA EL TEXTO DEGRADADO */
-  background: linear-gradient(to bottom, #000000 0%,#3a1a5a 100%);
+  background-color: #E4F2E7;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -111,7 +110,7 @@ import logo from '../assets/wa.jpeg';
 .Intro {
   font-weight: 700; 
   text-align: center; 
-  color: #f0f0f0; 
+  color: #2D3E40; 
 
   /* CLAVE PARA EL CENTRADO: Limita el ancho del texto */
   max-width: 800px; 
@@ -140,8 +139,8 @@ import logo from '../assets/wa.jpeg';
   margin-top: 40px; 
 
   /* Fondo */
-  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); /* Degradado Morado a Azul */
-  color: white; /* Color del texto */
+  background-color: #387373;
+  color: rgb(255, 255, 255); /* Color del texto */
   
   /* Píldora/Cápsula */
   padding: 12px 30px; /* Relleno para hacerlo más grande */
@@ -152,15 +151,14 @@ import logo from '../assets/wa.jpeg';
   font-size: 1.1rem; 
   font-weight: 600; 
   cursor: pointer; /* Cambiar el cursor para indicar que es interactivo */
-  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transición suave para el efecto hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para el efecto hover */
 }
 
 /* Efecto al pasar el mouse (hover) */
 .header-logo-container button:hover {
   /* Le da un pequeño efecto de elevación (escala) */
   transform: scale(1.05); 
-  /* Sombra suave para darle profundidad */
-  box-shadow: 0 5px 15px rgba(106, 17, 203, 0.4); 
+  background-color: #000000 ;
 }
 
 /* Ajuste para pantallas más pequeñas si el texto es demasiado grande */

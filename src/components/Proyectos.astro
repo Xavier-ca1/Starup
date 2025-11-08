@@ -5,6 +5,25 @@ import Logo from '../assets/wa.jpeg';
 <div class = "Proyecto">
     <p id="Titulo">Nuestros Proyectos</p>
     <p id="Subtitulo"> From idea to launch. Here's what we've been building.</p>  
+    <div class="project-card">
+    <div class="card-header">
+        <div class="project-icon"></div> 
+        <span class="status-live">LIVE</span>
+    </div>
+    
+    <h3 class="project-title">Nombre del Proyecto</h3>
+    <p class="project-desc">Una frase concisa sobre el propósito de la aplicación o herramienta.</p>
+
+    <div class="tags-container">
+        <span class="tag">App</span>
+        <span class="tag">Social</span>
+        <span class="tag">Productividad</span>
+    </div>
+
+    <a href="https://github.com/Xavier-ca1/orbital-orbit" class="visit-link" target="_blank" rel="noopener noreferrer">
+        Ver Proyecto →
+    </a>
+</div>
 </div>
 
 <style>
@@ -30,6 +49,7 @@ import Logo from '../assets/wa.jpeg';
     font-weight: bold;
     margin-bottom: 0;
     background-color: transparent;
+    font-family: "Roboto";
 }
 #Subtitulo{
     color: rgb(165, 165, 165);
@@ -37,6 +57,113 @@ import Logo from '../assets/wa.jpeg';
     font-size: 1.2rem;
     margin-top: 5px;
     margin: 10px;
+    font-family: "Inter",  ;
+}
+/* ---------------------------------
+  ESTILOS DEL CONTENEDOR DE PROYECTOS
+  ---------------------------------
+*/
+.projects-grid {
+    display: grid;
+    /* Diseñamos una cuadrícula de 2 o 3 columnas */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px; /* Espacio entre las tarjetas */
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto 100px auto; /* Centrado debajo del encabezado "Nuestros Proyectos" */
+}
+
+/* ---------------------------------
+  ESTILOS BASE DE LA TARJETA
+  ---------------------------------
+*/
+.project-card {
+    /* Fondo oscuro para contrastar */
+    background-color: #027368; 
+    opacity: 0.9;
+    padding: 30px;
+    border-radius: 15px;
+    
+    /* Borde inicial: transparente (usaremos un pseudo-elemento para el hover) */
+    border: 1px solid transparent; 
+    
+    /* Efecto de transición para suavizar el hover */
+    transition: all 0.3s ease-out; 
+    
+    /* Importante para el efecto hover de borde */
+    position: relative; 
+    overflow: hidden; /* Oculta el borde antes del hover */
+    cursor: pointer;
+}
+
+/* ---------------------------------
+  EFECTO DE BORDE BRILLANTE EN HOVER
+  ---------------------------------
+*/
+
+/* 1. Pseudo-elemento para el borde (caja de luz) */
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1; /* Asegura que esté detrás del contenido */
+    border-radius: 15px;
+    
+    /* Gradiente Morado/Azul (similar al botón) */
+    background:#04BFAD; 
+    
+    /* Inicialmente invisible */
+    opacity: 0; 
+    /* El truco: lo escalamos un poco para que sea un borde */
+    transform: scale(1.02); 
+    transition: opacity 0.3s ease-out;
+}
+
+/* 2. Efecto HOVER: Mostrar el borde y elevar la tarjeta */
+.project-card:hover {
+    transform: translateY(-5px); /* Pequeño desplazamiento hacia arriba */
+}
+
+.project-card:hover::before {
+    opacity: 1; /* Muestra el borde brillante al hacer hover */
+}
+
+/* 3. Asegura que el contenido quede arriba del borde (z-index) */
+.project-card > * {
+    position: relative;
+    z-index: 2; 
+}
+
+
+/* ---------------------------------
+  ESTILOS DEL CONTENIDO (Textos, Iconos, etc.)
+  ---------------------------------
+*/
+.project-title {
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.project-desc {
+    color: #a0a0a0;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* Estilos para el link "Ver Proyecto" */
+.visit-link {
+    color: #ffffff; /* Color azul brillante */
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+    display: block;
+    width: fit-content;
+    transition: color 0.2s;
 }
 
 </style>
